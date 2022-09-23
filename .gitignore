@@ -10,6 +10,22 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+/Week_1/[Ll]ibrary/
+/Week_1/[Tt]emp/
+/Week_1/[Oo]bj/
+/Week_1/[Bb]uild/
+/Week_1/[Bb]uilds/
+/Week_1/[Ll]ogs/
+/Week_1/[Uu]ser[Ss]ettings/
+
+/Week_2/[Ll]ibrary/
+/Week_2/[Tt]emp/
+/Week_2/[Oo]bj/
+/Week_2/[Bb]uild/
+/Week_2/[Bb]uilds/
+/Week_2/[Ll]ogs/
+/Week_2/[Uu]ser[Ss]ettings/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
@@ -70,3 +86,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Week_1/.vsconfig
+Week_2/.vsconfig
