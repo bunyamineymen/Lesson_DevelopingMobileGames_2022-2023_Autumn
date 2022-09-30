@@ -84,6 +84,18 @@ The Project window displays all of the files related to your Project and is the 
 
 
 
+ ### The Scene view
+
+The Scene view is your interactive view into the world you are creating. You can use the Scene view to select and position scenery, characters, Cameras, lights, and all other types of GameObjects.Selecting manipulating, and modifying GameObjects in the Scene view are some of the first skills you must learn to begin working in Unity.
+
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Preparation/SceneView.png"></td>
+  </tr>
+ </table>
+
+
+
 ## Demo 1 
 
 * Create Canvas and basic canvas components
