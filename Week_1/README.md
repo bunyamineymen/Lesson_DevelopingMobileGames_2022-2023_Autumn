@@ -55,16 +55,33 @@ Edit - Preference - External Script Editor
   </tr>
  </table>
 
-### [The Hierarchy window](https://docs.unity3d.com/Manual/Hierarchy.html)
- Displays every GameObject in a Scene, such as models, Cameras, or Prefabs.
 
 
+### The Hierarchy window
+
+The Hierarchy window displays every GameObject in a Scene, such as models, Cameras, or Prefabs. You can use the Hierarchy window to sort and group the GameObjects you use in a Scene. When you add or remove GameObjects in the Scene view, you also add or remove them from the Hierarchy window.
+
+The Hierarchy window can also contain other Scenes, with each Scene
+ containing their own GameObjects.
 
 <table>
   <tr>
     <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Preparation/The%20Hierarchy%20window.png"></td>
   </tr>
  </table>
+
+
+
+ ### The Project window
+
+The Project window displays all of the files related to your Project and is the main way you can navigate and find Assets and other Project files in your application. When you start a new Project by default this window is open. However, if you cannot find it, or it is closed, you can open it via Window > General > Project or press Ctrl+5 (macOS: Cmd+5).
+
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Preparation/ProjectWindow.png"></td>
+  </tr>
+ </table>
+
 
 
 ## Demo 1 
