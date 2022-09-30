@@ -96,6 +96,33 @@ The Scene view is your interactive view into the world you are creating. You can
 
 
 
+ ### The Game view
+
+The Game view is rendered from the Camera(s) in your application. It represents your final, published application. You need to use one or more Cameras
+ to control what the player sees when they are using your application. For more information about Cameras, see the Camera Component page.
+
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Preparation/gameView.png"></td>
+  </tr>
+ </table>
+
+
+
+
+ ### The Inspector View
+
+Use the Inspector window to view and edit properties and settings for almost everything in the Unity Editor, including GameObjects, Unity components, Assets, Materials, and in-Editor settings and preferences.
+
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Preparation/Inspector.png"></td>
+  </tr>
+ </table>
+
+
+
+
 ## Demo 1 
 
 * Create Canvas and basic canvas components
