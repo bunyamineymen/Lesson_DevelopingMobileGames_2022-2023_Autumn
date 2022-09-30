@@ -43,14 +43,10 @@ For downloading Unity Game Engine ,at first download [Unity-Hub](https://unity3d
 
 ## Development Preparation
 
-* Create Canvas and basic canvas components
-* Canvas Scaler - UI Scale Mode
-* Text & TextMeshPRO
-* Basic RectTransform
-* Image component and use as background
 
+### Set IDE for development in unity.
 
-* Set Visual Studio for Unity environment
+Set Visual Studio for Unity environment
 Edit - Preference - External Script Editor
 
 ### [The Hierarchy window](https://docs.unity3d.com/Manual/Hierarchy.html)
