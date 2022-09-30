@@ -54,13 +54,13 @@ For downloading Unity Game Engine ,at first download [Unity-Hub](https://unity3d
 * Set Visual Studio for Unity environment
 Edit - Preference - External Script Editor
 
-[The Hierarchy window](https://unity3d.com/get-unity/download)
-
+### Development Preparation 
+[Hierarchy window](https://unity3d.com/get-unity/download)
 
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson1_DevelopingMobileGame/main/Assets/_Resources/Preparation/The Hierarchy window.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Preparation/The%20Hierarchy%20window.png"></td>
 
   </tr>
  </table>
