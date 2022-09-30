@@ -49,14 +49,20 @@ For downloading Unity Game Engine ,at first download [Unity-Hub](https://unity3d
 Set Visual Studio for Unity environment
 Edit - Preference - External Script Editor
 
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Preparation/IDE.png"></td>
+  </tr>
+ </table>
+
 ### [The Hierarchy window](https://docs.unity3d.com/Manual/Hierarchy.html)
  Displays every GameObject in a Scene, such as models, Cameras, or Prefabs.
 
-<table>
 
+
+<table>
   <tr>
     <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Preparation/The%20Hierarchy%20window.png"></td>
-
   </tr>
  </table>
 
