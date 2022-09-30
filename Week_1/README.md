@@ -41,7 +41,6 @@ For downloading Unity Game Engine ,at first download [Unity-Hub](https://unity3d
 
  </table>
 
-
 ## Development Preparation
 
 * Create Canvas and basic canvas components
@@ -54,8 +53,8 @@ For downloading Unity Game Engine ,at first download [Unity-Hub](https://unity3d
 * Set Visual Studio for Unity environment
 Edit - Preference - External Script Editor
 
-### Development Preparation 
-[Hierarchy window](https://unity3d.com/get-unity/download)
+### [The Hierarchy window](https://docs.unity3d.com/Manual/Hierarchy.html)
+ Displays every GameObject in a Scene, such as models, Cameras, or Prefabs.
 
 <table>
 
