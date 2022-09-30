@@ -10,19 +10,61 @@ Developing Mobile Game lesson for Ankara university - Week 1
 For downloading Unity Game Engine ,at first download [Unity-Hub](https://unity3d.com/get-unity/download) tool.
 
 
+<table>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Installation/phase_1.PNG" width=629.5 height=477 >
+    </td>
+  </tr>
+ </table>
+
+   <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Installation/phase_2.PNG" width=760.5 height=425 >
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Installation/phase_3.PNG" width=771.5 height=426 >
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Installation/phase_4.PNG" width=773 height=427.5 >
+    </td>
+  </tr>
+
+  
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_1/Assets/_Resources/Installation/phase_5.PNG" width=773 height=427.5 >
+    </td>
+  </tr>
+
+ </table>
+
+
+## Development Preparation
+
+* Create Canvas and basic canvas components
+* Canvas Scaler - UI Scale Mode
+* Text & TextMeshPRO
+* Basic RectTransform
+* Image component and use as background
+
+
+* Set Visual Studio for Unity environment
+Edit - Preference - External Script Editor
+
+[The Hierarchy window](https://unity3d.com/get-unity/download)
+
 
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson1_DevelopingMobileGame/main/Assets/_Resources/Installation/phase_1.png" >
-    </td>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson1_DevelopingMobileGame/main/Assets/_Resources/demo1.png" width=250 height=535></td>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson1_DevelopingMobileGame/main/Assets/_Resources/demo1.png" width=250  height=535></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson1_DevelopingMobileGame/main/Assets/_Resources/Preparation/The Hierarchy window.png"></td>
 
   </tr>
  </table>
 
- phase_1
 
 ## Demo 1 
 
