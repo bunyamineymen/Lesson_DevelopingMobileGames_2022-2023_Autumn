@@ -122,6 +122,18 @@ Use the Inspector window to view and edit properties and settings for almost eve
 
 
 
+ ### Console Window
+
+The Console Window displays errors, warnings, and other messages the Editor generates. These errors and warnings help you find issues in your project, such as script compilation errors. They also alert you to actions the Editor has taken automatically, such as replacing missing meta files, which could cause an issue somewhere else in your project.
+
+<table>
+  <tr>
+    <td><img src="https://docs.unity3d.com/uploads/Main/Console.png"></td>
+  </tr>
+ </table>
+
+
+
 
 ## Demo 1 
 
