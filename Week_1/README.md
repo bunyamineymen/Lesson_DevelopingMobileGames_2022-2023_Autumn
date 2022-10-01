@@ -175,6 +175,10 @@ public class Demo1 : MonoBehaviour
 
   ```
 
+[👉 Learn more about Canvas](https://learn.unity.com/tutorial/ui-components#)
+
+
+
 ## Demo 2
 
 * Unityevent
@@ -210,6 +214,11 @@ public class Demo2 : MonoBehaviour
 }
 
   ```
+
+
+[👉 Learn more about Event System](https://docs.unity3d.com/2019.1/Documentation/ScriptReference/EventSystems.EventSystem.html)
+
+
   
 ## Demo 3
 
@@ -260,7 +269,11 @@ public class Demo3 : MonoBehaviour
 
 }
 
+
   ```
+
+  [👉 Learn more about Time Class](https://karadotgames.com/unity-time-sinifi/)
+
   
 ## Demo 4
 
@@ -270,7 +283,6 @@ public class Demo3 : MonoBehaviour
 
   <tr>
     <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson1_DevelopingMobileGame/main/Assets/_Resources/demo4.png"></td>
-
   </tr>
  </table>
 
@@ -317,6 +329,16 @@ public class Demo4 : MonoBehaviour
 
   ```
   
+<table>
+
+ <tr>
+    <td><img src="https://docs.unity3d.com/560/Documentation/uploads/Main/monobehaviour_flowchart.svg"></td>
+  
+  </tr>
+ </table>
+
+  [👉 Learn more about Monobehaviour Methods](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html)
+
 ## Demo 5
 
 * Script Execution Order
@@ -349,7 +371,7 @@ public class Demo5Script2 : MonoBehaviour
 
 ```
   
-
+[👉 Learn more about Script Execution Order](https://docs.unity3d.com/Manual/class-MonoManager.html)
 
   ## Demo 6
 
@@ -443,5 +465,45 @@ public class Demo7Script2 : MonoBehaviour
     }
 }
 
+
   ```
 
+[👉 Learn more about Singleton Pattern](http://www.unitygeek.com/unity_c_singleton/)
+
+[👉 Learn more about Singleton Pattern](https://blog.devgenius.io/the-singleton-pattern-in-unity-b7b3bc051a62)
+
+[👉 Learn more about Singleton Pattern](https://sneakydaggergames.medium.com/how-to-create-the-singleton-design-pattern-in-unity-c-728d26e0cf73)
+
+
+
+References
+
+https://docs.unity3d.com
+
+https://www.youtube.com/c/unity/videos
+
+https://learn.unity.com/
+
+https://learn.unity.com/pathway/junior-programmer
+
+https://learn.unity.com/tutorial/introduction-to-scriptableobjects
+
+https://learn.unity.com/tutorial/explore-the-unity-editor-1#6273f00fedbc2a7f158cc1ee
+
+https://learn.unity.com/search?k=%5B%22tag%3A5813f57532b30600250d6e0d%22%5D
+
+https://docs.unity3d.com/Manual/CreatingScenes.html
+
+https://github.com/RyanNielson/awesome-unity
+
+https://github.com/michidk/Unity-Script-Collection
+
+https://github.com/Naphier/unity-design-patterns
+
+https://github.com/Kavex/GameDev-Resources
+
+https://github.com/leereilly/games/
+
+https://github.com/UnityCommunity/UnityLibrary/issues
+
+https://github.com/UnityCommunity/UnityLibrary
