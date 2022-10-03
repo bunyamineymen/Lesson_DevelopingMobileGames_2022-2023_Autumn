@@ -476,7 +476,7 @@ public class Demo7Script2 : MonoBehaviour
 
 
 
-Resources
+## Resources
 
 - [:book: Unity Official Documents](https://docs.unity3d.com)
 - [:book: Unity Official Youtube Channel](https://www.youtube.com/c/unity/videos)
@@ -499,7 +499,7 @@ Resources
 
 - [:book: Github - Game References](https://github.com/leereilly/games/)
 
-- [:book: Github - ](https://github.com/UnityCommunity/UnityLibrary)
+- [:book: Github - Awesome Reference](https://github.com/UnityCommunity/UnityLibrary)
 
 
 
