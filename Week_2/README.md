@@ -38,6 +38,11 @@ public class Player : MonoBehaviour
 
   ```
 
+
+[👉 Learn more about FixedUpdate](https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html)
+
+
+
   ## Demo 2
 
 * PlayerPrefs
@@ -81,6 +86,8 @@ public class Demo2 : MonoBehaviour
 }
 
   ```
+
+[👉 Learn more about PlayerPrefs](https://docs.unity3d.com/ScriptReference/PlayerPrefs.html)
 
 ## Demo 3
 
@@ -181,6 +188,8 @@ public class Demo3Manager : MonoBehaviour
 
   ```
 
+[👉 Learn more about DontDestroyOnLoad](https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html)
+
   ## Demo 4
 
 * Animator
@@ -208,6 +217,9 @@ public class Demo4 : MonoBehaviour
 
   ```
 
+[👉 Learn more about Animator](https://learn.unity.com/tutorial/controlling-animation)
+
+
   ## Demo 5
 
 * Material
@@ -221,12 +233,11 @@ public class Demo4 : MonoBehaviour
   </tr>
  </table>
 
-
+[👉 Learn more about Material](https://docs.unity3d.com/ScriptReference/Material.html)
 
   ## Demo 6
 
-* Material
-* Standart Shader
+* Particle System
 
 <table>
 
@@ -236,7 +247,7 @@ public class Demo4 : MonoBehaviour
   </tr>
  </table>
 
-
+[👉 Learn more about Particle System](https://docs.unity3d.com/ScriptReference/ParticleSystem.html)
 
   ## Demo 7
 
@@ -279,7 +290,7 @@ public class Demo7_Object1 : MonoBehaviour
 
   ```
 
-
+[👉 Learn more about Dotween](https://yasirkula.com/2018/07/04/unity-dotween-kullanimi/)
 
   ## Demo 8
 
@@ -331,7 +342,7 @@ public class Demo8 : MonoBehaviour
 
   ```
 
-
+[👉 Learn more about Time Class](https://docs.unity3d.com/ScriptReference/Time.html)
 
 
   ## Demo 9
@@ -345,8 +356,6 @@ public class Demo8 : MonoBehaviour
 
   </tr>
  </table>
-
-
 
 
 
@@ -395,6 +404,8 @@ public class Demo10Manager : MonoBehaviour
 }
 
 ```
+
+[👉 Learn more about Scriptable Object](https://docs.unity3d.com/Manual/class-ScriptableObject.html)
 
  ## Demo 11
 
@@ -549,3 +560,19 @@ public class GunBehaviour : MonoBehaviour
 }
 
 ```
+
+## Resources
+
+- [:book: Scriptable Object](https://www.youtube.com/watch?v=BFYRUDk6TDs)
+- [:book: Particle System](https://www.youtube.com/watch?v=FEA1wTMJAR0)
+- [:book: Movement](https://www.youtube.com/watch?v=ixM2W2tPn6c)
+
+## Next Lesson Topics
+
+- Rigidbody
+- Colliders
+- Gravity
+- Physic materials, bounce, colliding
+- Raycasting
+- Collision matrix 
+
