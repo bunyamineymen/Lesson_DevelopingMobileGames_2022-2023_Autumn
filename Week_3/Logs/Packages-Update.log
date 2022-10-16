@@ -1,0 +1,10 @@
+
+=== Wed Sep 28 18:23:05 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.2d.sprite@1.0.0
+  com.unity.2d.tilemap@1.0.0
+  com.unity.xr.legacyinputhelpers@2.1.8
