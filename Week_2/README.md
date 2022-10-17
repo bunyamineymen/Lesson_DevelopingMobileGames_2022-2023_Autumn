@@ -221,56 +221,108 @@ public class Demo4 : MonoBehaviour
 
 
 
-  ## Demo 5
+ ## Demo 5
 
-* Run Particle Effect
-* Instantiate command
+* Keyboard Input
+* Rigidbody
+* Collider
+* OnTriggerEnter
 * Rigidbody.AddForce command
 
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo12.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo11.png"></td>
 
   </tr>
  </table>
 
-```csharp
+ ```csharp
 
-public class Demo12 : MonoBehaviour
-{
+public class Playercontroller : MonoBehaviour {
 
-    public GunBehaviour GunBehaviour;
+	public float speed; 
+	public Text countText;
+	public Text winText; 
+	private Rigidbody rb; 
+	private int count; 
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GunBehaviour.Shoot();
-        }
-    }
+	void Start ()
+	{
+		rb = GetComponent<Rigidbody>();
+		count = 0; 
+		SetCountText ();
+		winText.text = ""; 
+	}
+
+	void FixedUpdate () 
+	{
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		float moveVertical = Input.GetAxis ("Vertical");
+
+		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+
+		rb.AddForce (movement * speed); 
+
+	}
+
+	void OnTriggerEnter(Collider other) 
+	{
+		if (other.gameObject.CompareTag("Pick Up")) 
+		{
+			other.gameObject.SetActive (false);
+			count = count + 1;
+			SetCountText ();
+		}
+	}
+
+	void SetCountText ()
+	{
+		countText.text = "Count: " + count.ToString (); 
+		if ( count >= 12) 
+		{
+			winText.text = "You Win!"; 
+		}
+
+	}
+
+}
+
+  ```
+
+  ```csharp
+
+public class CameraController : MonoBehaviour {
+
+	public GameObject player; 
+
+	private Vector3 offset; 
+
+	// Use this for initialization
+	void Start () {
+		offset = transform.position - player.transform.position; 
+	}
+	
+	// Update is called once per frame
+	void LateUpdate () {
+		transform.position = player.transform.position + offset; 
+	}
 }
 
 ```
 
 ```csharp
 
-public class GunBehaviour : MonoBehaviour
-{
-    public GameObject Bullet;
-    public Transform BulletReference;
+public class Rotator : MonoBehaviour {
 
-    public const float velocity = 5000;
-
-    public void Shoot()
-    {
-        var bullet = Instantiate(Bullet, BulletReference.position, Quaternion.identity);
-        var rgb = bullet.GetComponent<Rigidbody>();
-        rgb.AddForce(BulletReference.forward * velocity, ForceMode.Force);
-    }
+	// Update is called once per frame
+	void Update () 
+	{
+		transform.Rotate (new Vector3 (15, 30, 45) * Time.deltaTime);
+	}
 }
 
-```
+  ```
 
 ## Resources
 
