@@ -1020,3 +1020,4 @@ Received Import Request.
   path: Assets/Demo_6/Demo6.unity
   artifactKey: Guid(333d26d19d96d0549ab65aa99f5b9f14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Demo_6/Demo6.unity using Guid(333d26d19d96d0549ab65aa99f5b9f14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'abc6ba1b9b24b884bb7a5cc60753b37e') in 0.002353 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
