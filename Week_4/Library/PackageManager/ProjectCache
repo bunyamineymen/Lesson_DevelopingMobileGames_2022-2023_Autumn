@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638015267214937742
-    m_Hash: 2635921997
+      ticks: 638016015774389647
+    m_Hash: 2376540858
   m_LockFileStatus:
     m_FilePath: C:/WorkingZone/_HuaweiDev/Lesson/Week_4/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638015267512048502
-    m_Hash: 2917251606
+      ticks: 638016015774389647
+    m_Hash: 1941096940
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -598,12 +598,14 @@ m_PackageAssets:
         - 1.1.30
         - 1.1.31
         - 1.1.33
+        - 1.3.0
         - 2.0.1-exp.1
         - 2.0.1-pre.12
         - 2.0.1-pre.18
         compatible:
         - 1.1.31
         - 1.1.33
+        - 1.3.0
         - 2.0.1-exp.1
         - 2.0.1-pre.12
         - 2.0.1-pre.18
