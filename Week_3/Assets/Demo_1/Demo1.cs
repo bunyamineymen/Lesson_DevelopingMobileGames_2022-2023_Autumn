@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class Demo7 : MonoBehaviour
+public class Demo1 : MonoBehaviour
 {
 
     public GunBehaviour GunBehaviour;
