@@ -9,35 +9,88 @@ At the beginning of the lesson , "Package Manager" will be mentioned.
 Then we will import Dotween and CartoonFX unitypackages from asset store.
 
 
-
   ## Demo 1
 
-* Material
-* Standart Shader
+* Run Particle Effect
+* Instantiate command
+* Rigidbody.AddForce command
 
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo5.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo12.png"></td>
 
   </tr>
  </table>
 
-[👉 Learn more about Material](https://docs.unity3d.com/ScriptReference/Material.html)
+```csharp
+
+public class Demo12 : MonoBehaviour
+{
+
+    public GunBehaviour GunBehaviour;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GunBehaviour.Shoot();
+        }
+    }
+}
+
+```
+
+```csharp
+
+public class GunBehaviour : MonoBehaviour
+{
+    public GameObject Bullet;
+    public Transform BulletReference;
+
+    public const float velocity = 5000;
+
+    public void Shoot()
+    {
+        var bullet = Instantiate(Bullet, BulletReference.position, Quaternion.identity);
+        var rgb = bullet.GetComponent<Rigidbody>();
+        rgb.AddForce(BulletReference.forward * velocity, ForceMode.Force);
+    }
+}
+
+```
 
   ## Demo 2
 
-* Particle System
+* PingPong Motion
 
-<table>
+ ```csharp
 
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo6.png"></td>
+public class Demo2Run : MonoBehaviour
+{
+    public Transform tr;
+    public Rigidbody rgb;
 
-  </tr>
- </table>
+    private void Start()
+    {
+    }
 
-[👉 Learn more about Particle System](https://docs.unity3d.com/ScriptReference/ParticleSystem.html)
+    private void Update()
+    {
+        Slide(tr, Vector3.right);
+    }
+
+    void Slide(Transform target, Vector3 railDirection)
+    {
+        Vector3 heading = target.position - transform.position;
+        Vector3 force = Vector3.Project(heading, railDirection);
+
+        rgb.AddForce(force);
+    }
+
+}
+
+  ```
 
   ## Demo 3
 
@@ -198,56 +251,91 @@ public class Demo10Manager : MonoBehaviour
 [👉 Learn more about Scriptable Object](https://docs.unity3d.com/Manual/class-ScriptableObject.html)
 
 
-  ## Demo 7
 
-* Run Particle Effect
-* Instantiate command
-* Rigidbody.AddForce command
+ ## Demo 7
+
+* Vector3.Slerp
+* Sun Rise Motion
+
+
+
+ ```csharp
+
+
+public class Run : MonoBehaviour
+{
+
+    public Transform sunrise;
+    public Transform sunset;
+
+    // Time to move from sunrise to sunset position, in seconds.
+    public float journeyTime = 1.0f;
+
+    // The time at which the animation started.
+    private float startTime;
+
+    void Start()
+    {
+        // Note the time at the start of the animation.
+        startTime = Time.time;
+    }
+
+    void Update()
+    {
+        // The center of the arc
+        Vector3 center = (sunrise.position + sunset.position) * 0.5F;
+
+        // move the center a bit downwards to make the arc vertical
+        center -= new Vector3(0, 10, 0);
+
+        // Interpolate over the arc relative to center
+        Vector3 riseRelCenter = sunrise.position - center;
+        Vector3 setRelCenter = sunset.position - center;
+
+        // The fraction of the animation that has happened so far is
+        // equal to the elapsed time divided by the desired time for
+        // the total journey.
+        float fracComplete = (Time.time - startTime) / journeyTime;
+
+        //  transform.position = Vector3.SlerpUnclamped(riseRelCenter, setRelCenter, fracComplete);
+        transform.position = Vector3.Slerp(riseRelCenter, setRelCenter, fracComplete);
+        transform.position += center;
+    }
+
+}
+
+```
+
+
+  ## Demo 8
+
+* Material
+* Standart Shader
 
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo12.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo5.png"></td>
 
   </tr>
  </table>
 
-```csharp
+[👉 Learn more about Material](https://docs.unity3d.com/ScriptReference/Material.html)
 
-public class Demo12 : MonoBehaviour
-{
+  ## Demo 9
 
-    public GunBehaviour GunBehaviour;
+* Particle System
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GunBehaviour.Shoot();
-        }
-    }
-}
+<table>
 
-```
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo6.png"></td>
 
-```csharp
+  </tr>
+ </table>
 
-public class GunBehaviour : MonoBehaviour
-{
-    public GameObject Bullet;
-    public Transform BulletReference;
+[👉 Learn more about Particle System](https://docs.unity3d.com/ScriptReference/ParticleSystem.html)
 
-    public const float velocity = 5000;
-
-    public void Shoot()
-    {
-        var bullet = Instantiate(Bullet, BulletReference.position, Quaternion.identity);
-        var rgb = bullet.GetComponent<Rigidbody>();
-        rgb.AddForce(BulletReference.forward * velocity, ForceMode.Force);
-    }
-}
-
-```
 
 ## Resources
 
