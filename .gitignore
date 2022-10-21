@@ -10,6 +10,14 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+/Project/ProjectCore/[Ll]ibrary/
+/Project/ProjectCore/[Tt]emp/
+/Project/ProjectCore/[Oo]bj/
+/Project/ProjectCore/[Bb]uild/
+/Project/ProjectCore/[Bb]uilds/
+/Project/ProjectCore/[Ll]ogs/
+/Project/ProjectCore/[Uu]ser[Ss]ettings/
+
 /Week_1/[Ll]ibrary/
 /Week_1/[Tt]emp/
 /Week_1/[Oo]bj/
