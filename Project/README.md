@@ -1,9 +1,49 @@
 
 <!-- # ![mg-builder](/img~/mg-builder.png) -->
 
-# Lesson 1
+# Project
 
-Developing Mobile Game lesson for Ankara university - Week 1
+Term project of this lesson...
+
+ is the core project of your term project.
+
+You are going to develop your project on this project....
+
+## Phases
+
+### 1 - If you don't have a github account, create a github account.
+
+### 2 - Download [This](https://github.com/bunyamineymen/Lesson_DevelopingMobileGames/tree/main/Project/ProjectCore) core project and start to develop on this project.
+
+### 3 - After completing project, release on your own github account.
+
+### 4 - Then you mail the your project github url and your basic infos to 
+
+
+
+## Project Details
+
+I want you to make Cube Surfers hypercasual game as a Unity project.
+
+You can see the [video](https://www.youtube.com/watch?v=DsbDvYPWKc0&t=76s) of this game.
+
+You can download the game on your mobile devices.
+
+[Google Play](https://play.google.com/store/apps/details?id=com.Atinon.PassOver&hl=en&gl=US)
+
+[App Store](https://apps.apple.com/tr/app/cube-surfer/id1499118002)
+
+[App Gallery](https://appgallery.huawei.com/app/C104480997)
+
+
+### Basic Requirements
+
+Unity Version: 2020.3
+
+Screen Resolution: 9*16
+
+We can move our character to the right and left of the road by moving our finger to the left and right anywhere on the screen.
+
 
 ## Unity Installation
 
