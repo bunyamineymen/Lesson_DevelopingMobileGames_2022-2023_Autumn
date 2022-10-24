@@ -198,14 +198,6 @@ public class Demo5_1 : MonoBehaviour
 
 ```
 
-<table>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo5.png"></td>
-  </tr>
-
- </table>
-
   ## Demo 6
 
 * Camera - Viewport Rect 
