@@ -6,6 +6,105 @@
 Developing Mobile Game lesson for Ankara university - Week 4
 
 
+
+# Demo 1 
+## Rigidbody Example
+
+Rigidbody is a component which allows GameObjects to connect with physics engine.
+With rigidbody; you can make a gameobject collidable, gravity dependent and force effectible.
+
+For applying rigidbody component to our GameObject, we have two basic way.
+
+## 1) Adding Rigidbody Component on Editor.
+
+We can directly add a gameobject by using our Unity editor.
+You have to select your gameobject on "Hierarch" list first.
+And after that, you can see your GameObject's attributes and components at right bar.
+
+<table>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/Week_3/Assets/_Resources/demo1_1.png"></td>
+
+  </tr>
+ </table>
+
+ Now you can click "Add component" button. And component searchbox will be shown.
+ You can type "Rigidbody" here. And select the component 
+ **Attention: if you are working on a 2D project, you have to add Rigidbody2D. Otherwise, you should add just "Rigidbody"
+
+## 2) Adding with programming at runtime
+
+```csharp
+GameObject ourGameObject; //May assigned from editor or assigned on runtime by find, findByTag or etc.
+ if (!gameobject.GetComponent<Rigidbody>())
+{
+    Rigidbody newRigidbody = gameobject.AddComponent<Rigidbody>();
+    newRigidbody.mass = mass;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+# Demo 3 
+## Gravity Example
+
+You have several ways nake your gameobjects gravity-independent.
+
+## 1) Manipulating "Use Gravity" attribute
+Or best option is setting "Use Gravity" option disabled.
+By doing this, you can make your gameobject gravit affected or not affected at any time in your game.
+Note: When you set a gravity to object and removed it later, you can observe that object still moves to ground but slower. This happens because when you
+unticked the use gravity, your object has became gravity acceleration independent. 
+But it still remains its velocity. So, you can set its velocity to zero or make its isKinematic attribute ticked.
+
+## 2) Manipulating Is Kinematic Switching
+If your gameobject should affected by physics generally but you just want to make it unaffected for a while,
+you can disable isKinematic attribute by code (at runtime) or by editor from inspector panel.
+
+
+## 3) Removing Rigidbody
+Other option is dealing with physical-nonphysical switching.
+So you can basically remove rigidbody component (Or you kindly don't add at creation of object).
+We don't recommend it if you need to use this object with physics later.
+
+## 4) Wrong Way : Trying to manipulating with mass.
+
+Also, you may think about making mass value of gameobject's rigidbody component 0.
+Like as real life, a object without mass can not affected by gravity should swing on the sky.
+But, actually we don't expect that both of unity and real life. Because in real life, you can not create any object that has zero mass.
+Because all particles of atom and even a electron has a mass.
+So, we can not do this unity either. Unity don't allow developers to create gameobject with zero gravity.
+Its because colliding with object that has zero gravity may cause unstable conditions.
+For example, we can not calculate momentum of a collision of zero mass object.
+When you mass value to 0 from editor, you can see that unity replaces zero with "1e-07" value.
+This represents "0.0000001" value. So, this is ourminimum mass value for each gameobject.
+Also remember, when you set an objects mass to zero, game engine will replace it with "1e-07" value automatically.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ## Demo 1
 
 * Run Particle Effect
