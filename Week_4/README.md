@@ -278,7 +278,7 @@ public class Demo7 : MonoBehaviour
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/sunRise.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/sunRise.png" width=340></td>
 
   </tr>
  </table>
