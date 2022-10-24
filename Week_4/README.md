@@ -48,8 +48,20 @@ GameObject ourGameObject; //May assigned from editor or assigned on runtime by f
 
 
 
+# Demo 2
+## Colliders
 
+Unity handles collision between GameObjects with colliders, which attach to GameObjects and define the shape of a GameObject
+ for the purposes of physical collisions. A collider is invisible, and does not need to be the exact same shape as the GameObject’s mesh
+. A rough approximation of the mesh is often more efficient and indistinguishable in gameplay.
 
+<table>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo2.png"></td>
+
+  </tr>
+ </table>
 
 
 
@@ -91,6 +103,23 @@ Also remember, when you set an objects mass to zero, game engine will replace it
 
 
 
+```csharp
+
+public class Demo3 : MonoBehaviour
+{
+    public GameObject gameobject;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            Rigidbody rigidbody = gameobject.GetComponent<Rigidbody>();
+            rigidbody.useGravity = !rigidbody.useGravity;
+        }
+    }
+}
+
+```
 
 
 
@@ -98,6 +127,105 @@ Also remember, when you set an objects mass to zero, game engine will replace it
 
 
 
+
+# Demo 4
+
+## Physic Material
+
+The Physic Material adjusts friction and bouncing effects of colliding GameObjects.
+To create a Physic Material, select Assets > Create > Physic Material from the menu bar. Then drag the Physic Material from the Project View onto a Collider in the scene.
+
+<table>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo4_1.png"></td>
+  </tr>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo4_2.png"></td>
+  </tr>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo4_3.png"></td>
+  </tr>
+
+ </table>
+
+
+
+
+
+# Demo 5
+
+## Raycast
+
+Casts a ray, from point origin, in direction direction, of length maxDistance, against all colliders in the Scene.
+
+```csharp
+
+public class Demo5_1 : MonoBehaviour
+{
+
+    public GameObject duckBody;
+    public GameObject laserMachine;
+    public int RotationSpeed = 5;
+    public int laserLength = 15;
+
+    public Material redMaterial;
+    public Material defaultMaterial;
+
+    Ray ray;
+    RaycastHit hit;
+
+
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            rotateLaserMachine(0.1f);
+        }
+
+        //float mouseAxis = Input.GetAxis("Mouse X");
+        duckBody.GetComponent<MeshRenderer>().material = defaultMaterial;
+        handleRaycast(laserMachine);
+    }
+
+    void rotateLaserMachine(float axis)
+    {
+        laserMachine.transform.Rotate(
+            0,
+            (axis * RotationSpeed),
+            0,
+            Space.World
+       );
+    }
+
+    void handleRaycast(GameObject handler)
+    {
+        // Does the ray intersect any objects excluding the player layer
+        Debug.DrawRay(handler.transform.position, handler.transform.TransformDirection(Vector3.forward) * 15, Color.red);
+        if (Physics.Raycast(handler.transform.position, laserMachine.transform.TransformDirection(Vector3.forward), out hit, laserLength))
+        {
+            if (hit.transform.gameObject.name == "Duck")
+            {
+                duckBody.GetComponent<MeshRenderer>().material = redMaterial;
+                Debug.Log("We hit the duck !");
+            }
+
+        }
+    }
+}
+
+```
+
+<table>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo5.png"></td>
+  </tr>
+
+ </table>
 
 
 

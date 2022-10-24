@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Demo5_1 : MonoBehaviour
-{   
+{
 
     public GameObject duckBody;
     public GameObject laserMachine;
@@ -16,22 +17,16 @@ public class Demo5_1 : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-
-     
-
-    }
-
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetMouseButton(0))
+        {
+            rotateLaserMachine(0.1f);
+        }
 
-        float mouseAxis = Input.GetAxis("Mouse X");
-        rotateLaserMachine(mouseAxis);
+        //float mouseAxis = Input.GetAxis("Mouse X");
         duckBody.GetComponent<MeshRenderer>().material = defaultMaterial;
         handleRaycast(laserMachine);
     }
@@ -39,9 +34,9 @@ public class Demo5_1 : MonoBehaviour
     void rotateLaserMachine(float axis)
     {
         laserMachine.transform.Rotate(
-            0, 
-            (axis * RotationSpeed ), 
-            0, 
+            0,
+            (axis * RotationSpeed),
+            0,
             Space.World
        );
     }
@@ -52,12 +47,12 @@ public class Demo5_1 : MonoBehaviour
         Debug.DrawRay(handler.transform.position, handler.transform.TransformDirection(Vector3.forward) * 15, Color.red);
         if (Physics.Raycast(handler.transform.position, laserMachine.transform.TransformDirection(Vector3.forward), out hit, laserLength))
         {
-            if(hit.transform.gameObject.name == "Duck")
+            if (hit.transform.gameObject.name == "Duck")
             {
                 duckBody.GetComponent<MeshRenderer>().material = redMaterial;
                 Debug.Log("We hit the duck !");
             }
-            
+
         }
     }
 }
