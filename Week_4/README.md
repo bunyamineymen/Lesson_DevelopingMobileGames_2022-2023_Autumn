@@ -1,12 +1,9 @@
 
 <!-- # ![mg-builder](/img~/mg-builder.png) -->
 
-# Lesson 3
+# Lesson 4
 
-Developing Mobile Game lesson for Ankara university - Week 3
-
-At the beginning of the lesson , "Package Manager" will be mentioned.
-Then we will import Dotween and CartoonFX unitypackages from asset store.
+Developing Mobile Game lesson for Ankara university - Week 4
 
 
   ## Demo 1

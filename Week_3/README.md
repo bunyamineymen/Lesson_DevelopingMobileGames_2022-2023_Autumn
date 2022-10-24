@@ -25,7 +25,7 @@ Then we will import Dotween and CartoonFX unitypackages from asset store.
 
 ```csharp
 
-public class Demo12 : MonoBehaviour
+public class Demo1 : MonoBehaviour
 {
 
     public GunBehaviour GunBehaviour;
@@ -47,6 +47,7 @@ public class GunBehaviour : MonoBehaviour
 {
     public GameObject Bullet;
     public Transform BulletReference;
+    public ParticleSystem ParticleSystem;
 
     public const float velocity = 5000;
 
@@ -55,7 +56,9 @@ public class GunBehaviour : MonoBehaviour
         var bullet = Instantiate(Bullet, BulletReference.position, Quaternion.identity);
         var rgb = bullet.GetComponent<Rigidbody>();
         rgb.AddForce(BulletReference.forward * velocity, ForceMode.Force);
+        ParticleSystem.Play();
     }
+
 }
 
 ```
@@ -188,21 +191,8 @@ public class Demo8 : MonoBehaviour
 [👉 Learn more about Time Class](https://docs.unity3d.com/ScriptReference/Time.html)
 
 
-  ## Demo 5
 
-* Camera - Viewport Rect 
-
-<table>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson2_DevelopingMobileGame/main/Assets/_Resources/demo9.png"></td>
-
-  </tr>
- </table>
-
-
-
- ## Demo 6
+ ## Demo 5
 
 * Scriptable Objects
 
@@ -252,62 +242,8 @@ public class Demo10Manager : MonoBehaviour
 
 
 
- ## Demo 7
 
-* Vector3.Slerp
-* Sun Rise Motion
-
-
-
- ```csharp
-
-
-public class Run : MonoBehaviour
-{
-
-    public Transform sunrise;
-    public Transform sunset;
-
-    // Time to move from sunrise to sunset position, in seconds.
-    public float journeyTime = 1.0f;
-
-    // The time at which the animation started.
-    private float startTime;
-
-    void Start()
-    {
-        // Note the time at the start of the animation.
-        startTime = Time.time;
-    }
-
-    void Update()
-    {
-        // The center of the arc
-        Vector3 center = (sunrise.position + sunset.position) * 0.5F;
-
-        // move the center a bit downwards to make the arc vertical
-        center -= new Vector3(0, 10, 0);
-
-        // Interpolate over the arc relative to center
-        Vector3 riseRelCenter = sunrise.position - center;
-        Vector3 setRelCenter = sunset.position - center;
-
-        // The fraction of the animation that has happened so far is
-        // equal to the elapsed time divided by the desired time for
-        // the total journey.
-        float fracComplete = (Time.time - startTime) / journeyTime;
-
-        //  transform.position = Vector3.SlerpUnclamped(riseRelCenter, setRelCenter, fracComplete);
-        transform.position = Vector3.Slerp(riseRelCenter, setRelCenter, fracComplete);
-        transform.position += center;
-    }
-
-}
-
-```
-
-
-  ## Demo 8
+  ## Demo 6
 
 * Material
 * Standart Shader
@@ -322,7 +258,7 @@ public class Run : MonoBehaviour
 
 [👉 Learn more about Material](https://docs.unity3d.com/ScriptReference/Material.html)
 
-  ## Demo 9
+  ## Demo 7
 
 * Particle System
 
