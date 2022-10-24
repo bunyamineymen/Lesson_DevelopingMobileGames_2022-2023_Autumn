@@ -24,7 +24,7 @@ And after that, you can see your GameObject's attributes and components at right
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGame/Week_4/Assets/_Resources/demo1_1.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo1_1.png"></td>
 
   </tr>
  </table>
