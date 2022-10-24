@@ -205,7 +205,7 @@ public class Demo5_1 : MonoBehaviour
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo5.png/viewportRect.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/viewportRect.png"></td>
 
   </tr>
  </table>
