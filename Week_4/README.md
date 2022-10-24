@@ -42,6 +42,8 @@ GameObject ourGameObject; //May assigned from editor or assigned on runtime by f
 }
 ```
 
+[👉 Learn more about Rigidbody](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
+
 # Demo 2
 ## Colliders
 
@@ -56,6 +58,8 @@ Unity handles collision between GameObjects with colliders, which attach to Game
 
   </tr>
  </table>
+
+ [👉 Learn more about Rigidbody](https://docs.unity3d.com/ScriptReference/Collider.html)
 
 # Demo 3 
 ## Gravity Example
@@ -110,6 +114,8 @@ public class Demo3 : MonoBehaviour
 
 ```
 
+ [👉 Learn more about Gravity](https://docs.unity3d.com/ScriptReference/Physics-gravity.html)
+
 # Demo 4
 
 ## Physic Material
@@ -133,6 +139,8 @@ The Physic Material adjusts friction and bouncing effects of colliding GameObjec
  </table>
 
 To create a Physic Material, select Assets > Create > Physic Material from the menu bar. Then drag the Physic Material from the Project View onto a Collider in the scene.
+
+ [👉 Learn more about Physics Material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html)
 
 # Demo 5
 
@@ -198,6 +206,10 @@ public class Demo5_1 : MonoBehaviour
 
 ```
 
+ [👉 Learn more about Raycast](https://mobidictum.biz/unity-raycast/)
+
+
+
   ## Demo 6
 
 * Camera - Viewport Rect 
@@ -209,6 +221,9 @@ public class Demo5_1 : MonoBehaviour
 
   </tr>
  </table>
+
+ [👉 Learn more about Viewport Rect ](https://answers.unity.com/questions/1194103/how-can-i-change-the-viewport-rect-of-two-active-c.html)
+
 
  ## Demo 7
 
@@ -262,16 +277,13 @@ public class Demo7 : MonoBehaviour
 
 ## Resources
 
-- [:book: Scriptable Object](https://www.youtube.com/watch?v=BFYRUDk6TDs)
-- [:book: Particle System](https://www.youtube.com/watch?v=FEA1wTMJAR0)
-- [:book: Movement](https://www.youtube.com/watch?v=ixM2W2tPn6c)
+- [:book: Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html)
+- [:book: Rotate](https://docs.unity3d.com/ScriptReference/Transform.Rotate.html)
 
 ## Next Lesson Topics
 
-- Rigidbody
-- Colliders
-- Gravity
-- Physic materials, bounce, colliding
-- Raycasting
-- Collision matrix 
+- Transform
+- Input
+- Motion
+
 
