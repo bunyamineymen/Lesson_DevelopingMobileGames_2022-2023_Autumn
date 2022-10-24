@@ -275,6 +275,14 @@ public class Demo7 : MonoBehaviour
 
 ```
 
+<table>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/sunRise.png"></td>
+
+  </tr>
+ </table>
+
 ## Resources
 
 - [:book: Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html)
