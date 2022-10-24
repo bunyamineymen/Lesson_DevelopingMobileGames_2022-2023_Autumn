@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-public class Demo6Manager : MonoBehaviour
+public class Demo5Manager : MonoBehaviour
 {
-    public Demo6 demo10;
+    public Demo5 demo10;
 
     private void Start()
     {
