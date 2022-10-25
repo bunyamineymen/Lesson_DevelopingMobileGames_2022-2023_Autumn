@@ -26,14 +26,17 @@ You can download the game on your mobile devices.
 
 ### 1 - If you don't have a github account, create a github account.
 
-### 2 - Download [this](https://github.com/bunyamineymen/Lesson_DevelopingMobileGames/tree/main/Project/ProjectCore) core project and start to develop on this project.
+### 2 - Mail your github url and your basic infos to 
+bunyamineymenalagoz@gmail.com until 28.10.2022.
 
-### 3 - After completing project, release on your own github account.
+### 3 - Download [this](https://github.com/bunyamineymen/Lesson_DevelopingMobileGames/tree/main/Project/ProjectCore) core project and start to develop on this project.
 
-### 4 - Then you mail the your project github url and your basic infos to 
+### 4 - After completing project, release on your own github account.
+
+### 5 - Then you mail the your project github url and your basic infos to 
 bunyamineymenalagoz@gmail.com until project deadline (14.11.2022).
 
-### 5 - You are going to present your project at 16.11.2022 in online class by sharing screen.
+### 6 - You are going to present your project at 16.11.2022 in online class by sharing screen.
 
 
 
@@ -56,13 +59,32 @@ The player starts the game with 1 cube.
 
 Player collects these cubes. The cubes are placed on the bottom floor, the other cubes go up one floor.
 
-Everything except core mechanic and input is your decision.
+Everything except core mechanic (only collect and drop cube) and input is your decision.
 
 # Presentation Details
 
  1 - Present unity project.
 
  2 - Sharing mobile device screen (game installed) on your computer then play game on your device 
+
+# Grading Details
+
+Core Mechanic + input + gameplay feelings = % 50
+
+Code Quality = % 10
+
+Effects = % 10
+
+Keeping project tidy = % 10
+
+UI and UX flow (fail,success,restart,score) = % 10
+
+Game Desing + Level Design = 10
+
+# Suggestions
+
+You can get help from [Unity Asset Store](https://assetstore.unity.com/) for free ui and effect unity plugins.
+
 
 
 
