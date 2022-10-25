@@ -26,7 +26,7 @@ You can download the game on your mobile devices.
 
 ### 1 - If you don't have a github account, create a github account.
 
-### 2 - Mail your github url and your basic infos to 
+### 2 - Mail your github account url and your basic infos to 
 bunyamineymenalagoz@gmail.com until 28.10.2022.
 
 ### 3 - Download [this](https://github.com/bunyamineymen/Lesson_DevelopingMobileGames/tree/main/Project/ProjectCore) core project and start to develop on this project.
