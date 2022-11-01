@@ -46,219 +46,237 @@ Layer-based collision detection is a way to make a GameObject collide with anoth
 
 
 # Demo 3 
-## Gravity Example
 
-Unity handles collision between GameObjects with colliders, which attach to GameObjects and define the shape of a GameObject
- for the purposes of physical collisions. A collider is invisible, and does not need to be the exact same shape as the GameObject’s mesh
-. A rough approximation of the mesh is often more efficient and indistinguishable in gameplay.
-
-<table>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo3_1.png"></td>
-  </tr>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/3_2.png"></td>
-  </tr>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/3_3.png"></td>
-  </tr>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo3_4.png"></td>
-  </tr>
-
- </table>
+## Movement Example
 
 ```csharp
 
 public class Demo3 : MonoBehaviour
 {
-    public GameObject gameobject;
+    // Start is called before the first frame update
 
-    private void Update()
+    public GameObject character_1;
+    public float forcePower;
+    Rigidbody character_1_rigidbody;
+
+    void Start()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            Rigidbody rigidbody = gameobject.GetComponent<Rigidbody>();
-            rigidbody.useGravity = !rigidbody.useGravity;
-        }
+        character_1_rigidbody = character_1.GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        freeMovement();
+    }
+
+    void freeMovement()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+            character_1_rigidbody.AddForce(Vector3.left * forcePower);
+        if (Input.GetKey(KeyCode.RightArrow))
+            character_1_rigidbody.AddForce(Vector3.right * forcePower);
+        if (Input.GetKey(KeyCode.W))
+            character_1_rigidbody.AddForce(Vector3.forward * forcePower);
+        if (Input.GetKey(KeyCode.S))
+            character_1_rigidbody.AddForce(Vector3.back * forcePower);
+        if (Input.GetKey(KeyCode.UpArrow))
+            character_1_rigidbody.AddForce(Vector3.up * forcePower);
+        if (Input.GetKey(KeyCode.DownArrow))
+            character_1_rigidbody.AddForce(Vector3.down * forcePower);
+
     }
 }
 
-```
 
- [👉 Learn more about Gravity](https://docs.unity3d.com/ScriptReference/Physics-gravity.html)
+```
 
 # Demo 4
 
-## Physic Material
-
-The Physic Material adjusts friction and bouncing effects of colliding GameObjects.
-
-<table>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo4_1.png" width = 600></td>
-  </tr>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo4_2.png"></td>
-  </tr>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo4_3.png"></td>
-  </tr>
-
- </table>
-
-To create a Physic Material, select Assets > Create > Physic Material from the menu bar. Then drag the Physic Material from the Project View onto a Collider in the scene.
-
- [👉 Learn more about Physics Material](https://docs.unity3d.com/Manual/class-PhysicMaterial.html)
-
-# Demo 5
-
-## Raycast
-
-Casts a ray, from point origin, in direction direction, of length maxDistance, against all colliders in the Scene.
+## Jump Example
 
 ```csharp
 
-public class Demo5_1 : MonoBehaviour
+public class Demo4 : MonoBehaviour
 {
+    // Start is called before the first frame update
 
-    public GameObject duckBody;
-    public GameObject laserMachine;
-    public int RotationSpeed = 5;
-    public int laserLength = 15;
+    public GameObject character_1;
+    public float forcePower = 2.5f;
+    public float RotationSpeed = 5;
+    Rigidbody character_1_rigidbody;
 
-    public Material redMaterial;
-    public Material defaultMaterial;
-
-    Ray ray;
-    RaycastHit hit;
-
-
-    // Update is called once per frame
-    void FixedUpdate()
+    void Start()
     {
-        if (Input.GetMouseButton(0))
-        {
-            rotateLaserMachine(0.1f);
-        }
-
-        //float mouseAxis = Input.GetAxis("Mouse X");
-        duckBody.GetComponent<MeshRenderer>().material = defaultMaterial;
-        handleRaycast(laserMachine);
+        character_1_rigidbody = character_1.GetComponent<Rigidbody>();
     }
 
-    void rotateLaserMachine(float axis)
+    void Update()
     {
-        laserMachine.transform.Rotate(
-            0,
-            (axis * RotationSpeed),
-            0,
-            Space.World
-       );
+        relativeMovement();
+        relativeRotation();
+        jumpMovement();
     }
 
-    void handleRaycast(GameObject handler)
+    void relativeMovement()
     {
-        // Does the ray intersect any objects excluding the player layer
-        Debug.DrawRay(handler.transform.position, handler.transform.TransformDirection(Vector3.forward) * 15, Color.red);
-        if (Physics.Raycast(handler.transform.position, laserMachine.transform.TransformDirection(Vector3.forward), out hit, laserLength))
-        {
-            if (hit.transform.gameObject.name == "Duck")
-            {
-                duckBody.GetComponent<MeshRenderer>().material = redMaterial;
-                Debug.Log("We hit the duck !");
-            }
 
-        }
+        if (Input.GetKey(KeyCode.W))
+            character_1_rigidbody.AddForce(character_1.transform.up * forcePower);
+        if (Input.GetKey(KeyCode.S))
+            character_1_rigidbody.AddForce(character_1.transform.up * forcePower * -1);
+        if (Input.GetKey(KeyCode.D))
+            character_1_rigidbody.AddForce(character_1.transform.right * forcePower );
+        if (Input.GetKey(KeyCode.A))
+            character_1_rigidbody.AddForce(character_1.transform.right * forcePower * -1);
+    }
+
+    void jumpMovement()
+    {
+        if (Input.GetKey(KeyCode.Space))
+            character_1_rigidbody.AddForce(character_1.transform.forward * forcePower);
+    }
+
+    void relativeRotation() 
+    {
+        float mouseAxis = Input.GetAxis("Mouse X");
+        character_1.transform.Rotate(
+              0,
+              (mouseAxis * RotationSpeed),
+              0,
+              Space.World
+         );
     }
 }
 
+
 ```
 
- [👉 Learn more about Raycast](https://mobidictum.biz/unity-raycast/)
+# Demo 5
+
+## AddExplosionForce Command
+
+Applies a force to a rigidbody that simulates explosion effects.
+
+The explosion is modelled as a sphere with a certain centre position and radius in world space; normally, anything outside the sphere is not affected by the explosion and the force decreases in proportion to distance from the centre. However, if a value of zero is passed for the radius then the full force will be applied regardless of how far the centre is from the rigidbody.
+
+```csharp
+
+public class Demo5 : MonoBehaviour
+{
+    public GameObject bomb;
+    public float bombRadius = 5.0F;
+    public float bombPower = 700.0F;
+    public float bombModifier = 3.0F;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            explode();
+        }
+    }
+
+    void explode()
+    {
+        GameObject bombMuzzle = bomb.transform.GetChild(0).gameObject;
+        bombMuzzle.transform.SetParent(this.gameObject.transform);
+        bombMuzzle.SetActive(true);
+        Vector3 explosionPos = bomb.transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, bombRadius);
+        foreach (Collider hit in colliders)
+        {
+            Rigidbody rb = hit.GetComponent<Rigidbody>();
+
+            if (rb != null)
+                rb.AddExplosionForce(bombPower, explosionPos, bombRadius, bombModifier);
+        }
+        bomb.SetActive(false);
+    }
+}
+
+
+```
+
+ [👉 Learn more about AddExplosionForce](https://docs.unity3d.com/ScriptReference/Rigidbody.AddExplosionForce.html)
 
 
 
   ## Demo 6
 
-* Camera - Viewport Rect 
+In this demo we understand to importance of ragdoll system .
 
-<table>
+```csharp
 
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/viewportRect.png"></td>
+public class Demo6 : MonoBehaviour
+{
+    public GameObject bomb;
+    public GameObject ragdoll;
+    public float bombRadius = 5.0F;
+    public float bombPower = 400.0F;
+    public float bombModifier = 3.0F;
+    public bool slowMotion = false;
+    // Start is called before the first frame update
+    void Start()
+    {
 
-  </tr>
- </table>
+    }
 
- [👉 Learn more about Viewport Rect ](https://answers.unity.com/questions/1194103/how-can-i-change-the-viewport-rect-of-two-active-c.html)
+    // Update is called once per frame
+    void Update()
+    {
+        if (slowMotion)
+            Time.timeScale = 0.5F;
+        else
+            Time.timeScale = 1;
+        if (Input.GetKeyDown("space"))
+        {
+            explode();
+        }
+    }
+
+    void explode()
+    {
+
+        GameObject bombMuzzle = bomb.transform.GetChild(0).gameObject;
+        GameObject ragdollArmature = ragdoll.transform.GetChild(0).gameObject;
+        
+
+        bombMuzzle.transform.SetParent(this.gameObject.transform);
+        bombMuzzle.SetActive(true);
+        ragdollArmature.SetActive(true);
+
+        Vector3 explosionPos = bomb.transform.position;
+        Collider[] colliders = Physics.OverlapSphere(explosionPos, bombRadius);
+        foreach (Collider hit in colliders)
+        {
+            Rigidbody rb = hit.GetComponent<Rigidbody>();
+
+            if (rb != null)
+                rb.AddExplosionForce(bombPower, explosionPos, bombRadius, bombModifier);
+        }
+        bomb.SetActive(false);
+    }
+}
+
+
+```
+
+ [👉 Learn more about Ragdoll](https://docs.unity3d.com/Manual/wizard-RagdollWizard.html)
 
 
  ## Demo 7
 
-* Vector3.Slerp
-* Sun Rise Motion
-
- ```csharp
-
-public class Demo7 : MonoBehaviour
-{
-
-    public Transform sunrise;
-    public Transform sunset;
-
-    // Time to move from sunrise to sunset position, in seconds.
-    public float journeyTime = 1.0f;
-
-    // The time at which the animation started.
-    private float startTime;
-
-    void Start()
-    {
-        // Note the time at the start of the animation.
-        startTime = Time.time;
-    }
-
-    void Update()
-    {
-        // The center of the arc
-        Vector3 center = (sunrise.position + sunset.position) * 0.5F;
-
-        // move the center a bit downwards to make the arc vertical
-        center -= new Vector3(0, 10, 0);
-
-        // Interpolate over the arc relative to center
-        Vector3 riseRelCenter = sunrise.position - center;
-        Vector3 setRelCenter = sunset.position - center;
-
-        // The fraction of the animation that has happened so far is
-        // equal to the elapsed time divided by the desired time for
-        // the total journey.
-        float fracComplete = (Time.time - startTime) / journeyTime;
-
-        //  transform.position = Vector3.SlerpUnclamped(riseRelCenter, setRelCenter, fracComplete);
-        transform.position = Vector3.Slerp(riseRelCenter, setRelCenter, fracComplete);
-        transform.position += center;
-    }
-}
-
-```
-
-<table>
+In this demo we understand to need of ragdoll system.
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/sunRise.png" width=540></td>
-
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo7.png"></td>
   </tr>
- </table>
-
 
  ## Demo 8
 
