@@ -38,7 +38,7 @@ bunyamineymenalagoz@gmail.com until project deadline (14.11.2022).
 
 ### 6 - You are going to present your project at 23.11.2022 in online class by sharing screen.
 
-Note : There is no lesson at 16.11.2022
+Note : There is no lesson on 16.11.2022
 
 
 # Technical Details
@@ -87,7 +87,7 @@ You can get help from [Unity Asset Store](https://assetstore.unity.com/) for fre
 
 # Announcements
 
-There is no lesson at 16.11.2022
+There is no lesson on 16.11.2022
 
 
 
