@@ -54,12 +54,15 @@ The character moves forward at a constant speed. We want to be able to change th
 A game about stacking the cubes we collect.
 
 There are 5 different colored cubes: green, red, blue, yellow, purple.
+You can select which you want.
 
 The player starts the game with 1 cube.
 
 Player collects these cubes. The cubes are placed on the bottom floor, the other cubes go up one floor.
 
 Everything except core mechanic (only collect and drop cube) and input is your decision.
+
+Player must have loop animaton.
 
 # Presentation Details
 
