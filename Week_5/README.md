@@ -11,33 +11,42 @@ Developing Mobile Game lesson for Ankara university - Week 5
 Rigidbody is a component which allows GameObjects to connect with physics engine.
 With rigidbody; you can make a gameobject collidable, gravity dependent and force effectible.
 
-For applying rigidbody component to our GameObject, we have two basic way.
+<table>
 
-## 1) Adding Rigidbody Component on Editor.
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo1_1.png"></td>
+  </tr>
 
-We can directly add a gameobject by using our Unity editor.
-You have to select your gameobject on "Hierarch" list first.
-And after that, you can see your GameObject's attributes and components at right bar.
+ </table>
 
- Now you can click "Add component" button. And component searchbox will be shown.
- You can type "Rigidbody" here. And select the component 
- **Attention: if you are working on a 2D project, you have to add Rigidbody2D. Otherwise, you should add just "Rigidbody"
-
-## 2) Adding with programming at runtime
-
-```csharp
-GameObject ourGameObject; //May assigned from editor or assigned on runtime by find, findByTag or etc.
- if (!gameobject.GetComponent<Rigidbody>())
-{
-    Rigidbody newRigidbody = gameobject.AddComponent<Rigidbody>();
-    newRigidbody.mass = mass;
-}
-```
 
 [👉 Learn more about Rigidbody](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
 
 # Demo 2
-## Colliders
+## Physics Layer
+
+Layer-based collision detection is a way to make a GameObject collide with another GameObject that is set up to a specific Layer or Layers.
+
+<table>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo2.png"></td>
+  </tr>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo2_2.png"></td>
+  </tr>
+
+ </table>
+
+ [👉 Learn more about Physics Layer](https://docs.unity3d.com/Manual/LayerBasedCollision.html)
+
+
+
+
+
+# Demo 3 
+## Gravity Example
 
 Unity handles collision between GameObjects with colliders, which attach to GameObjects and define the shape of a GameObject
  for the purposes of physical collisions. A collider is invisible, and does not need to be the exact same shape as the GameObject’s mesh
@@ -46,47 +55,22 @@ Unity handles collision between GameObjects with colliders, which attach to Game
 <table>
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_4/Assets/_Resources/demo2.png"></td>
-
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo3_1.png"></td>
   </tr>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/3_2.png"></td>
+  </tr>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/3_3.png"></td>
+  </tr>
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo3_4.png"></td>
+  </tr>
+
  </table>
-
- [👉 Learn more about Rigidbody](https://docs.unity3d.com/ScriptReference/Collider.html)
-
-# Demo 3 
-## Gravity Example
-
-You have several ways nake your gameobjects gravity-independent.
-
-## 1) Manipulating "Use Gravity" attribute
-Or best option is setting "Use Gravity" option disabled.
-By doing this, you can make your gameobject gravit affected or not affected at any time in your game.
-Note: When you set a gravity to object and removed it later, you can observe that object still moves to ground but slower. This happens because when you
-unticked the use gravity, your object has became gravity acceleration independent. 
-But it still remains its velocity. So, you can set its velocity to zero or make its isKinematic attribute ticked.
-
-## 2) Manipulating Is Kinematic Switching
-If your gameobject should affected by physics generally but you just want to make it unaffected for a while,
-you can disable isKinematic attribute by code (at runtime) or by editor from inspector panel.
-
-
-## 3) Removing Rigidbody
-Other option is dealing with physical-nonphysical switching.
-So you can basically remove rigidbody component (Or you kindly don't add at creation of object).
-We don't recommend it if you need to use this object with physics later.
-
-## 4) Wrong Way : Trying to manipulating with mass.
-
-Also, you may think about making mass value of gameobject's rigidbody component 0.
-Like as real life, a object without mass can not affected by gravity should swing on the sky.
-But, actually we don't expect that both of unity and real life. Because in real life, you can not create any object that has zero mass.
-Because all particles of atom and even a electron has a mass.
-So, we can not do this unity either. Unity don't allow developers to create gameobject with zero gravity.
-Its because colliding with object that has zero gravity may cause unstable conditions.
-For example, we can not calculate momentum of a collision of zero mass object.
-When you mass value to 0 from editor, you can see that unity replaces zero with "1e-07" value.
-This represents "0.0000001" value. So, this is ourminimum mass value for each gameobject.
-Also remember, when you set an objects mass to zero, game engine will replace it with "1e-07" value automatically.
 
 ```csharp
 
@@ -274,6 +258,79 @@ public class Demo7 : MonoBehaviour
 
   </tr>
  </table>
+
+
+ ## Demo 8
+
+
+# Demo 8
+## Ragdolls
+
+### * What is ragdoll ?
+Ragdoll is basically a unity feature that allow us to make character physics more realistic.
+With ragdoll, we can apply force to our character and make it much more realistic than animations.
+In the past, most of game development companies are developed death, swing or flying away animations for using in action.
+But with ragdoll technology, we just need to break animation, set active the ragdoll and applying the force.
+And remain is will be handled by game engine.
+Ofcourse most of game engines has ragdoll feature. Its not limited with unity.
+
+### * How does ragdoll works ?
+Now, lets explain ragdoll concept with what we learned from our lesson.
+As you know, a rigged body has many parts for providing bending to joints.
+Basically, if you need wave your character's hand in unity, you need to add riggs for your shoulder,
+arm, forearm (And fingers, if extra functionallity and gestures needed)
+Ragdoll mechanism in unity, basically adds rigidbody with mess (calculated due to body-part size) and collider by mesh.
+This allows our character to fall like a connected chain.
+
+### * How to create ragdoll by using Unity Editor ?
+First of all, you have to select your character in editor. And after that, right click on the gameobject and select 3D Object> Create Ragdoll
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo8_1.png"></td>
+  </tr>
+
+And after that, a pop-up menu like this will welcome you. You can add your character model parts with correct matching.
+You can see the correct ragdoll connection below.
+
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo8_2.png"></td>
+  </tr>
+
+Also, all of mixamo models will work properly with this ragdoll connection settings.
+After clicking "Create" button, game engine will automatically add rigidbody and collider each of our character parts.
+Please don't change any of this collider and rigidbody component's attributes. Because they will calculated in runtime by game engine.
+
+So; our next question is :
+
+### * How to disable ragdoll programmatically ?
+For example, we are working on a game and our character should die realistic. What should we do ?
+First of all, we need to assign ragdoll on runtime. Ofcourse you can use 3rd party assets for dealing with this.
+But in our lesson, we will do it by iterating each colliders and rigidbody components of our character.
+
+Basically, we need 13 different body parts for creating a ragdoll. That means, we will have 13 different rigidbody and collider components
+after ragdoll creation. So; we can disable our ragdoll with making them inactive or removed.
+But we need to repeat, if you have a intend to re-use your object later, please don't remove ragdoll. Just make it inactive until you need ragdoll again.
+
+ ```csharp
+public Rigidbody[] rigidbodies = new Rigidbody[13];
+public Collider[] colliders = new Collider[13];
+public CharacterJoint[] chJoints = new CharacterJoint[13];
+//assign them in editor
+ 
+foreach Rigidbody rb in rigidbodies
+   rb.useGravity = false; //true if you want to enable ragdoll
+ 
+foreach Collider coll in colliders
+   coll.enabled = false; //true if you want to enable ragdoll
+ 
+foreach CharacterJoint joint in chJoints
+   joint.enabled = false; //true if you want to enable ragdoll
+```
+
+Also remember ! We don't need rigidbody component each every part of our character's body. We just need it when realistic joint movement needed.
+So, in your standart game flow, you will not need ragdoll. It is only required for death, collusion, crashing, explosion and etc.
+
+
 
 ## Resources
 
