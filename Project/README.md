@@ -36,9 +36,9 @@ bunyamineymenalagoz@gmail.com until 28.10.2022.
 ### 5 - Then you mail the your project github url and your basic infos to 
 bunyamineymenalagoz@gmail.com until project deadline (14.11.2022).
 
-### 6 - You are going to present your project at 16.11.2022 in online class by sharing screen.
+### 6 - You are going to present your project at 23.11.2022 in online class by sharing screen.
 
-
+Note : There is no lesson at 16.11.2022
 
 
 # Technical Details
@@ -85,7 +85,9 @@ Game Desing + Level Design = 10
 
 You can get help from [Unity Asset Store](https://assetstore.unity.com/) for free ui and effect unity plugins.
 
+# Announcements
 
+There is no lesson at 16.11.2022
 
 
 
