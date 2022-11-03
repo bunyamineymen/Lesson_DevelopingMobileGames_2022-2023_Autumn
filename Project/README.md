@@ -25,6 +25,7 @@ You can download the game on your mobile devices.
 # Phases
 
 ### 1 - If you don't have a github account, create a github account.
+Then please star https://github.com/EvilMindDevs/hms-unity-plugin repository on github.
 
 ### 2 - Mail your github account url and your basic infos to 
 bunyamineymenalagoz@gmail.com until 28.10.2022.
@@ -90,7 +91,14 @@ You can get help from [Unity Asset Store](https://assetstore.unity.com/) for fre
 
 # Announcements
 
-There is no lesson on 16.11.2022
+ 1 - There is no lesson on 16.11.2022
+
+2 - Can you login to github account then star the project in this link?
+
+https://github.com/EvilMindDevs/hms-unity-plugin
+
+We will talk about this plugin in the coming weeks.This plugin is of great importance for mobile game projects developed with Unity to run on newly released huawei devices.
+By starring, you will have saved the project on your github account.You will also be supporting the team that developed this plugin.
 
 
 
