@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d787ce6026a6514594838856d832b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rgb: {fileID: 2062801778738401545}

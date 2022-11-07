@@ -85,6 +85,8 @@ public class PlayerCubeManager : MonoBehaviour
         foreach (var cube in listOfDroppingCubes)
         {
             cube.transform.parent = null;
+            cube.ActivatePhysics();
+
             listOfCubeBehaviour.Remove(cube);
             droppingCubeCount++;
         }
