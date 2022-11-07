@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Demo2 : MonoBehaviour
 {
-
-    public Animator doorAnimationController;
-
+    public Animator animatorController;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,16 +14,14 @@ public class Demo2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        jumpControl();
     }
 
-    public void openDoor()
+    void jumpControl()
     {
-        doorAnimationController.SetTrigger("opendoor");
-    }
+        if (Input.GetKeyDown(KeyCode.Space))
+            animatorController.SetTrigger("jump");
 
-    public void closeDoor()
-    {
-        doorAnimationController.SetTrigger("closedoor");
+
     }
 }
