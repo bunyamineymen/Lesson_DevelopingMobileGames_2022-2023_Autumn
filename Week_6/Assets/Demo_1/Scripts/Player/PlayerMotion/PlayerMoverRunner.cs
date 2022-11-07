@@ -5,7 +5,7 @@ public class PlayerMoverRunner : MonoBehaviour
 {
     private void FixedUpdate()
     {
-        transform.position += new Vector3(0F, 0F, 1F) * Time.deltaTime * 2F;
+        transform.position += new Vector3(0F, 0F, 1F) * Time.deltaTime * 1F;
 
         if (transform.position.x > 0.14F)
         {
