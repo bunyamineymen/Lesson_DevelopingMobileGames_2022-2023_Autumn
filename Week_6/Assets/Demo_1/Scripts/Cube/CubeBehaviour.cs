@@ -77,7 +77,6 @@ public class CubeBehaviour : MonoBehaviour
             {
                 //decrease block
                 PlayerCubeManager.Instance.DropCube(this);
-                transform.parent = null;
 
             }
         }
