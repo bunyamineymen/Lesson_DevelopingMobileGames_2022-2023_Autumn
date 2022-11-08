@@ -213,6 +213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1934271886}
     m_Modifications:
+    - target: {fileID: 2586550696659345632, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
+      propertyPath: isStacked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2586550696659345635, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -812,6 +816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cubeBlue Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2586550696659345646, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
 --- !u!1 &729010368
@@ -1370,6 +1378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cubeBlue Variant (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2586550696659345646, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
 --- !u!1 &1073482904
@@ -1520,6 +1532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cubeBlue Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2586550696659345646, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
 --- !u!1001 &1270564038
@@ -1576,6 +1592,10 @@ PrefabInstance:
     - target: {fileID: 2586550696659345646, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
       propertyPath: m_Name
       value: cubeBlue Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586550696659345646, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
@@ -1911,6 +1931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cubeBlue Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2586550696659345646, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
 --- !u!4 &1900127741
@@ -2041,7 +2065,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listOfCubeBehaviour:
   - {fileID: 856674090}
-  listOfDroppingCubes: []
 --- !u!4 &1942220879
 Transform:
   m_ObjectHideFlags: 0
@@ -2290,6 +2313,10 @@ PrefabInstance:
     - target: {fileID: 2586550696659345646, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
       propertyPath: m_Name
       value: cubeBlue Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2586550696659345646, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cdaa7bc95fafdc45ba2e61445131cd2, type: 3}
@@ -8227,7 +8254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2927862843134361645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0446, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0342, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 5797874525116421559}

@@ -17,10 +17,15 @@ public class CubeDetector : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Cube"))
         {
-            Debug.Log("Cube");
+            Debug.Log($"Cube {collision.gameObject.name}");
 
             var cubeBehaviour = collision.gameObject.GetComponent<CubeBehaviour>();
-            PlayerCubeManager.Instance.GetCube(cubeBehaviour);
+
+            if (!cubeBehaviour.isStacked)
+            {
+                PlayerCubeManager.Instance.GetCube(cubeBehaviour);
+
+            }
         }
     }
 }

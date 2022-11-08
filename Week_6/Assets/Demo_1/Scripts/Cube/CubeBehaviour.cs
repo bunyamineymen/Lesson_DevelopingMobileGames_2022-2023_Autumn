@@ -6,6 +6,10 @@ using UnityEngine;
 public class CubeBehaviour : MonoBehaviour
 {
 
+    private Vector3 direction = Vector3.forward;
+    public bool isStacked = false;
+    private RaycastHit hit;
+
     #region Variable: Rigidbody
 
     [SerializeField]
@@ -15,13 +19,13 @@ public class CubeBehaviour : MonoBehaviour
     #endregion
 
 
-    #region Variable: IndexOfCube
+    //#region Variable: IndexOfCube
 
-    private int indexOfCube = -1;
+    //private int indexOfCube = -1;
 
-    public int IndexOfCube { get => indexOfCube; set => indexOfCube = value; }
+    //public int IndexOfCube { get => indexOfCube; set => indexOfCube = value; }
 
-    #endregion
+    //#endregion
 
     //private void OnTriggerEnter(Collider other)
     //{
@@ -50,9 +54,7 @@ public class CubeBehaviour : MonoBehaviour
         rgb.isKinematic = false;
     }
 
-    private Vector3 direction = Vector3.forward;
-    private bool isStack = false;
-    private RaycastHit hit;
+
 
 
 
@@ -63,18 +65,18 @@ public class CubeBehaviour : MonoBehaviour
 
         if (Physics.Raycast(transform.position, direction, out hit, 1f * coeff))
         {
-            if (!isStack)
-            {
-                isStack = true;
-                // increase new block
-                direction = Vector3.forward;
+            //if (!isStacked)
+            //{
+            //    isStacked = true;
+            //    // increase new block
+            //    direction = Vector3.forward;
 
-            }
+            //}
 
             if (hit.transform.gameObject.CompareTag("Obstacle"))
             {
                 //decrease block
-                //PlayerCubeManager.Instance.DropCube(this);
+                PlayerCubeManager.Instance.DropCube(this);
                 transform.parent = null;
 
             }
