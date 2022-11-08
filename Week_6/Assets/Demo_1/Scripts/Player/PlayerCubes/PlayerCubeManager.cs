@@ -62,8 +62,14 @@ public class PlayerCubeManager : MonoBehaviour
     public void DropCube(CubeBehaviour cubeBehaviour)
     {
         cubeBehaviour.transform.parent = null;
+        cubeBehaviour.isStacked = false;
 
         listOfCubeBehaviour.Remove(cubeBehaviour);
+
+        if (listOfCubeBehaviour.Count < 1)
+        {
+            Debug.Log("Gameover");
+        }
 
         //ReorderCubes();
 

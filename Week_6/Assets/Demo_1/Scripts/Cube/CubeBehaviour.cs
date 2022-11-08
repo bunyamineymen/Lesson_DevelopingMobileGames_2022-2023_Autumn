@@ -60,6 +60,9 @@ public class CubeBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isStacked)
+            return;
+
         float coeff = 0.02f;
         Debug.DrawRay(transform.position, direction * coeff, Color.red);
 
