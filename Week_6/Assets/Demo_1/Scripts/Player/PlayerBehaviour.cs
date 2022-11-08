@@ -1,11 +1,19 @@
+using DG.Tweening;
+
 using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
 
+using static System.TimeZoneInfo;
+using static UnityEngine.GraphicsBuffer;
+
 public class PlayerBehaviour : MonoBehaviour
 {
 
+    public Animator animatorOfPlayer;
+
+    public PlayerMoverRunner playerMoverRunner;
 
     private void Awake()
     {
@@ -27,6 +35,17 @@ public class PlayerBehaviour : MonoBehaviour
 
     #endregion
 
+    public void VictoryAnimation()
+    {
+        animatorOfPlayer.SetTrigger("Victory");
+    }
 
+    public void FailAnimation()
+    {
+        animatorOfPlayer.SetTrigger("Fail");
+
+        DOTween.To(() => playerMoverRunner.Velocity, x => playerMoverRunner.Velocity = x, 0, 0.3f);
+
+    }
 
 }
