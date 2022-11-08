@@ -3,13 +3,24 @@ using UnityEngine;
 
 public class CubeDetector : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.CompareTag("Cube"))
+    //    {
+    //        var cubeBehaviour = other.gameObject.GetComponent<CubeBehaviour>();
+    //        PlayerCubeManager.Instance.GetCube(cubeBehaviour);
+    //    }
+
+    //}
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Cube"))
+        if (collision.gameObject.CompareTag("Cube"))
         {
-            var cubeBehaviour = other.gameObject.GetComponent<CubeBehaviour>();
+            Debug.Log("Cube");
+
+            var cubeBehaviour = collision.gameObject.GetComponent<CubeBehaviour>();
             PlayerCubeManager.Instance.GetCube(cubeBehaviour);
         }
-
     }
 }
