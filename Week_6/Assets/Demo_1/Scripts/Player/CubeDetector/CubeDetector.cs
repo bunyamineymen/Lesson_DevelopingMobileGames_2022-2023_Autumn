@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CubeDetector : MonoBehaviour
 {
+
     //private void OnTriggerEnter(Collider other)
     //{
     //    if (other.gameObject.CompareTag("Cube"))
@@ -10,7 +11,6 @@ public class CubeDetector : MonoBehaviour
     //        var cubeBehaviour = other.gameObject.GetComponent<CubeBehaviour>();
     //        PlayerCubeManager.Instance.GetCube(cubeBehaviour);
     //    }
-
     //}
 
     private void OnCollisionEnter(Collision collision)

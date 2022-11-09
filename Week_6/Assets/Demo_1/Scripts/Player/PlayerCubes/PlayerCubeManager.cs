@@ -71,6 +71,7 @@ public class PlayerCubeManager : MonoBehaviour
             Debug.Log("Gameover");
 
             PlayerBehaviour.Instance.FailAnimation();
+            return;
         }
 
         //ReorderCubes();

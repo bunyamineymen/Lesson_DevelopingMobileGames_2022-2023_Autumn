@@ -44,7 +44,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         animatorOfPlayer.SetTrigger("Fail");
 
-        DOTween.To(() => playerMoverRunner.Velocity, x => playerMoverRunner.Velocity = x, 0, 0.3f);
+        DOTween.To(() => playerMoverRunner.Velocity, x => playerMoverRunner.Velocity = x, 0, 0.003f);
 
     }
 
