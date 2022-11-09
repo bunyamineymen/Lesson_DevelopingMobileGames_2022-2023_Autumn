@@ -71,6 +71,12 @@ public class PlayerCubeManager : MonoBehaviour
             Debug.Log("Gameover");
 
             PlayerBehaviour.Instance.FailAnimation();
+
+            var playerTransform2 = PlayerBehaviour.Instance.transform;
+            Vector3 playerTarget2 = new Vector3(0f, -0.016f, -0.14f);
+            //Vector3 playerTarget2 = new Vector3(0f, -0.016f, 0.34f);
+            playerTransform2.DOLocalJump(playerTarget2, 0.05f, 1, 0.5f);
+
             return;
         }
 
