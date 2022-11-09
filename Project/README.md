@@ -35,7 +35,7 @@ bunyamineymenalagoz@gmail.com until 28.10.2022.
 ### 4 - After completing project, release on your own github account.
 
 ### 5 - Then you mail the your project github url and your basic infos to 
-bunyamineymenalagoz@gmail.com until project deadline (14.11.2022).
+bunyamineymenalagoz@gmail.com until project deadline (23.11.2022).
 
 ### 6 - You are going to present your project at 23.11.2022 in online class by sharing screen.
 
