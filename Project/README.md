@@ -91,7 +91,7 @@ You can get help from [Unity Asset Store](https://assetstore.unity.com/) for fre
 
 # Announcements
 
- 1 - There is no lesson on 16.11.2022
+1 - There is no lesson at visa week  (16.11.2022)
 
 2 - Can you login to github account then star the project in this link?
 
