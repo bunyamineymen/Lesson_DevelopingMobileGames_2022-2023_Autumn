@@ -1,20 +1,15 @@
 using DG.Tweening;
 
-using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
 
 public class PlayerCubeManager : MonoBehaviour
 {
-    private Vector3 FirstCubePosition = Vector3.zero;
     private float stepLength = 0.043f;
-    private float playerValue = 0.0226f;
+    private float groundYValue = -0.0213f;
 
     public List<CubeBehaviour> listOfCubeBehaviour = new List<CubeBehaviour>();
-
-    private bool dropMode = false;
-
 
     private void Awake()
     {
@@ -36,8 +31,6 @@ public class PlayerCubeManager : MonoBehaviour
 
     #endregion
 
-
-
     public void GetCube(CubeBehaviour cubeBehaviour)
     {
         listOfCubeBehaviour.Add(cubeBehaviour);
@@ -45,18 +38,17 @@ public class PlayerCubeManager : MonoBehaviour
 
         cubeBehaviour.transform.parent = transform;
 
-        int indexOfCube = listOfCubeBehaviour.Count - 1;
-
         ReorderCubes();
 
+        RelocatePlayer();
 
+    }
 
+    private void RelocatePlayer()
+    {
         var playerTransform = PlayerBehaviour.Instance.transform;
-        Vector3 playerTarget = new Vector3(0f, (indexOfCube) * stepLength + playerValue, 0f);
+        Vector3 playerTarget = new Vector3(0f, (listOfCubeBehaviour.Count) * stepLength + groundYValue, 0f);
         playerTransform.DOLocalMove(playerTarget, 0.05f);
-
-
-
     }
 
     public void DropCube(CubeBehaviour cubeBehaviour)
@@ -71,33 +63,21 @@ public class PlayerCubeManager : MonoBehaviour
             Debug.Log("Gameover");
 
             PlayerBehaviour.Instance.FailAnimation();
+            PlayerBehaviour.Instance.StopPlayer();
 
             var playerTransform2 = PlayerBehaviour.Instance.transform;
-            Vector3 playerTarget2 = new Vector3(0f, -0.016f, -0.14f);
-            //Vector3 playerTarget2 = new Vector3(0f, -0.016f, 0.34f);
-            playerTransform2.DOLocalJump(playerTarget2, 0.05f, 1, 0.5f);
+            Vector3 groundTarget = new Vector3(0f, -0.016f, -0.14f);
+            playerTransform2.DOLocalJump(groundTarget, 0.05f, 1, 0.5f);
 
             return;
         }
 
-        //ReorderCubes();
-
-
-
-        //player
-        int indexOfCube = listOfCubeBehaviour.Count - 1;
-
-        var playerTransform = PlayerBehaviour.Instance.transform;
-        Vector3 playerTarget = new Vector3(0f, (indexOfCube) * stepLength + playerValue, 0f);
-        playerTransform.DOLocalMove(playerTarget, 0.05f);
+        RelocatePlayer();
 
     }
 
-
-
     private void ReorderCubes()
     {
-        //reorder cubes
         int index = listOfCubeBehaviour.Count - 1;
         foreach (var cube in listOfCubeBehaviour)
         {

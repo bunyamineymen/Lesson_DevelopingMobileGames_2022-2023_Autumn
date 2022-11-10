@@ -1,12 +1,6 @@
 using DG.Tweening;
 
-using System.Collections;
-using System.Collections.Generic;
-
 using UnityEngine;
-
-using static System.TimeZoneInfo;
-using static UnityEngine.GraphicsBuffer;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -43,9 +37,12 @@ public class PlayerBehaviour : MonoBehaviour
     public void FailAnimation()
     {
         animatorOfPlayer.SetTrigger("Fail");
-
-        DOTween.To(() => playerMoverRunner.Velocity, x => playerMoverRunner.Velocity = x, 0, 0.003f);
-
     }
+
+    public void StopPlayer()
+    {
+        DOTween.To(() => playerMoverRunner.Velocity, x => playerMoverRunner.Velocity = x, 0, 0.003f);
+    }
+
 
 }
