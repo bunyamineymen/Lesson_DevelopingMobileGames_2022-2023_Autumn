@@ -100,6 +100,8 @@ https://github.com/EvilMindDevs/hms-unity-plugin
 We will talk about this plugin in the coming weeks.This plugin is of great importance for mobile game projects developed with Unity to run on newly released huawei devices.
 By starring, you will have saved the project on your github account.You will also be supporting the team that developed this plugin.
 
+3 - Project delivery date postponed to 23.11.2022 (presentation date)
+
 
 
 
