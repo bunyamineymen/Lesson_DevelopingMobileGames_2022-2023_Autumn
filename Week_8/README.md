@@ -1,9 +1,9 @@
 ﻿
 <!-- # ![mg-builder](/img~/mg-builder.png) -->
 
-# Lesson 5
+# Lesson 8
 
-Developing Mobile Game lesson for Ankara university - Week 5
+Developing Mobile Game lesson for Ankara university - Week 8
 
 # Demo 1 
 ## Rigidbody Example
