@@ -520,7 +520,7 @@ public class Demo6 : MonoBehaviour
 In this demo we understand to need of ragdoll system.
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo7.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_9/Assets/_Resources/demo777.png"></td>
   </tr>
 
  ## Demo 8
