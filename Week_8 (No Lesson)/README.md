@@ -1,7 +1,7 @@
 ﻿
 <!-- # ![mg-builder](/img~/mg-builder.png) -->
 
-# Lesson 7
+# Lesson 8
 
-There is no lesson at 16.11.2022
+Presentation week
 
