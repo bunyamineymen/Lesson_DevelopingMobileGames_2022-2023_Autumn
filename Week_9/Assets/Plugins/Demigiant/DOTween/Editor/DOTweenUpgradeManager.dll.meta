@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a811bde74b26b53498b4f6d872b09b6d
+guid: 2bf936a5d80799e4e88ec9270fea75a4
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
@@ -7,10 +7,10 @@ PluginImporter:
   isPreloaded: 0
   platformData:
     Any:
-      enabled: 1
+      enabled: 0
       settings: {}
     Editor:
-      enabled: 0
+      enabled: 1
       settings:
         DefaultValueInitialized: true
     WindowsStoreApps:
