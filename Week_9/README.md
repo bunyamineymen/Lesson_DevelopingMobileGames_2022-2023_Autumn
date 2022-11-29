@@ -1,49 +1,9 @@
 ﻿
 <!-- # ![mg-builder](/img~/mg-builder.png) -->
 
-# Lesson 8
+# Lesson 9
 
-Developing Mobile Game lesson for Ankara university - Week 8
-
-# Demo 1 
-## Rigidbody Example
-
-Rigidbody is a component which allows GameObjects to connect with physics engine.
-With rigidbody; you can make a gameobject collidable, gravity dependent and force effectible.
-
-<table>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo1_1.png"></td>
-  </tr>
-
- </table>
-
-
-[👉 Learn more about Rigidbody](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
-
-# Demo 2
-## Physics Layer
-
-Layer-based collision detection is a way to make a GameObject collide with another GameObject that is set up to a specific Layer or Layers.
-
-<table>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo2.png"></td>
-  </tr>
-
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo2_2.png"></td>
-  </tr>
-
- </table>
-
- [👉 Learn more about Physics Layer](https://docs.unity3d.com/Manual/LayerBasedCollision.html)
-
-
-
-
+Developing Mobile Game lesson for Ankara university - Week 9
 
 # Demo 3 
 
