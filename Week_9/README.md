@@ -5,6 +5,113 @@
 
 Developing Mobile Game lesson for Ankara university - Week 9
 
+# Demo 1
+
+## Editor Example
+
+```csharp
+
+public class Cube : MonoBehaviour {
+
+	void Start ()
+	{
+		GenerateColor();
+	}
+
+	public void GenerateColor ()
+	{
+		GetComponent<Renderer>().sharedMaterial.color = Random.ColorHSV();
+	}
+
+	public void Reset ()
+	{
+		GetComponent<Renderer>().sharedMaterial.color = Color.white;
+	}
+
+}
+
+```
+
+```csharp
+
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof(Cube))]
+public class CubeEditor : Editor {
+
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
+
+		Cube cube = (Cube)target;
+
+		GUILayout.BeginHorizontal();
+
+			if (GUILayout.Button("Generate Color"))
+			{
+				cube.GenerateColor();
+			}
+
+			if (GUILayout.Button("Reset"))
+			{
+				cube.Reset();
+			}
+
+		GUILayout.EndHorizontal();
+	}
+
+}
+
+```
+
+
+
+
+
+
+
+```csharp
+
+using UnityEngine;
+
+public class Sphere : MonoBehaviour {
+
+	public float baseSize = 1f;
+
+	void Update ()
+	{
+		float animation = baseSize + Mathf.Sin(Time.time * 8f) * baseSize / 7f;
+        transform.localScale = Vector3.one * animation;
+	}
+
+}
+
+```
+
+```csharp
+
+using UnityEngine;
+using UnityEditor;
+
+[CustomEditor(typeof(Sphere))]
+public class SphereEditor : Editor {
+
+	public override void OnInspectorGUI()
+	{
+		Sphere sphere = (Sphere)target;
+
+		GUILayout.Label("Oscillates around a base size.");
+
+		sphere.baseSize = EditorGUILayout.Slider("Size", sphere.baseSize, .1f, 2f);
+
+		sphere.transform.localScale = Vector3.one * sphere.baseSize;
+	}
+
+}
+
+```
+
 # Demo 2
 
 ## Editor Example
