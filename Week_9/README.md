@@ -549,14 +549,14 @@ This allows our character to fall like a connected chain.
 First of all, you have to select your character in editor. And after that, right click on the gameobject and select 3D Object> Create Ragdoll
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo8_1.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_9/Assets/_Resources/demo8_1.png"></td>
   </tr>
 
 And after that, a pop-up menu like this will welcome you. You can add your character model parts with correct matching.
 You can see the correct ragdoll connection below.
 
   <tr>
-    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_5/Assets/_Resources/demo8_2.png"></td>
+    <td><img src="https://raw.githubusercontent.com/bunyamineymen/Lesson_DevelopingMobileGames/main/Week_9/Assets/_Resources/demo8_2.png"></td>
   </tr>
 
 Also, all of mixamo models will work properly with this ragdoll connection settings.
