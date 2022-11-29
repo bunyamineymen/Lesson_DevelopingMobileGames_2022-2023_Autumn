@@ -597,13 +597,11 @@ So, in your standart game flow, you will not need ragdoll. It is only required f
 
 ## Resources
 
-- [:book: Vector3](https://docs.unity3d.com/ScriptReference/Vector3.html)
-- [:book: Rotate](https://docs.unity3d.com/ScriptReference/Transform.Rotate.html)
+- [:book: Ragdoll](https://docs.unity3d.com/Manual/wizard-RagdollWizard.html)
 
 ## Next Lesson Topics
 
-- Transform
-- Input
-- Motion
+- Joint
+- Cloth
 
 
