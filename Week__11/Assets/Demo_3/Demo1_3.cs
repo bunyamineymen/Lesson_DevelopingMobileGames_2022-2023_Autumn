@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Demo1_3 : MonoBehaviour
@@ -48,7 +49,7 @@ public class Demo1_3 : MonoBehaviour
     void jumpMovement()
     {
         if (Input.GetKey(KeyCode.Space))
-            character_1_rigidbody.AddForce(character_1.transform.up * movement_power * 2.5f);
+            character_1_rigidbody.AddForce(character_1.transform.up * movement_power * 0.95f);
     }
 
     void EggControl()
@@ -65,7 +66,7 @@ public class Demo1_3 : MonoBehaviour
         egg.AddComponent<Rigidbody>();
         egg.AddComponent<MeshRenderer>();
         egg.GetComponent<MeshRenderer>().material = egg_material;
-        
+
         Vector3 egg_throw_position = duck_ass.transform.position;
         egg.transform.position = egg_throw_position;
         egg.GetComponent<Rigidbody>().mass = 1;
