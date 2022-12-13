@@ -343,9 +343,9 @@ public class Demo1_5 : MonoBehaviour
 
 ```
 
-  ## Demo 6
+# Demo 6
 
-Joystic Movement
+## Joystic Movement
 
 ```csharp
 
