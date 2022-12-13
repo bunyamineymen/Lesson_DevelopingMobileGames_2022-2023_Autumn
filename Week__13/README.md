@@ -1,23 +1,11 @@
-﻿#  Week 10
-Developing Mobile Game lesson for Ankara university - Week 10
+﻿#  Week 13
 
-## Demo 1
-- Essential Animations on unity editor
+Developing Mobile Game lesson for Ankara university - Week 13
 
-## Demo 2
-- Animation Controller with automatic door example
+## Huawei Mobile Services
 
-## Demo 3
-- 3rd person Controller
+## hms-unity-plugin
 
-## Demo 4
-- Animation - Ragdol Switching
+## Firebase
 
-## Demo 5
-- Inverse Kinematics
-
-## Demo 6
-- Animation mask and blending
-
-## Demo 7
-- Humanoid and generic animations
+## Publish On App Gallery
