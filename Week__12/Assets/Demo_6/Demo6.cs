@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Demo6 : MonoBehaviour
 {
     public Animator animatorController;
+    public Animator animatorController2;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,7 +22,10 @@ public class Demo6 : MonoBehaviour
     void jumpControl()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            animatorController.SetTrigger("jump");
+        {
+            animatorController.SetTrigger("Jumping");
+            animatorController2.SetTrigger("Jumping");
+        }
 
 
     }
